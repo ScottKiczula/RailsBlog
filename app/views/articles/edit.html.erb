@@ -1,6 +1,6 @@
 <h1>Editing Article</h1>
 
-<%= form_for :article, url article_path(@article), method :patch do |f| %>
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
   <% if @article.errors.any? %>
   <div id="error_explination">
     <h2>
@@ -20,7 +20,7 @@
 </p>
 
 <p>
-  <%= f.label :text %>
+  <%= f.label :text %><br>
   <%= f.text_field :text %>
 </p>
 
@@ -30,4 +30,4 @@
 
 <% end %>
 
-<%= link_to 'Back', articles_path %>8
+<%= link_to 'Back', articles_path %>
