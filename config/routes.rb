@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :user
+  get 'signup' => 'users#new'
+
+  resources :users
   
   root 'welcome#index'
 
