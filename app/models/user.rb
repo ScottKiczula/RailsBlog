@@ -3,13 +3,4 @@ class User < ActiveRecord::Base
 
   has_many :articles
   has_many :comments
-  
-  def admin?
-    self.role == 'admin'
-  end
-
-  def editor?
-    self.role == 'editor'
-  end
-
 end
